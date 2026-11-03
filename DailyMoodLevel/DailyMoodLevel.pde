@@ -9,14 +9,14 @@ int graphRight = 740;
 void setup() {
   size(800, 420);
   
-  float currentMood = 5.0; 
+  float currentScreentime = 5.0; 
   for (int i = 0; i < totalDays; i++) {
-    currentMood += random(-1.2, 1.2);
+    currentScreentime += random(-1.2, 1.2);
     
-    if (currentMood > 10) currentMood = 10;
-    if (currentMood < 1) currentMood = 1;
+    if (currentScreentime > 10) currentScreentime = 10;
+    if (currentScreentime < 1) currentScreentime = 1;
     
-    dataPoints[i] = currentMood;
+    dataPoints[i] = currentScreentime;
   }
 }
 
@@ -26,13 +26,13 @@ void draw() {
   fill(30);
   textSize(32);
   textAlign(CENTER);
-  text("Daily Mood Level", width/2, 60);
+  text("Daily Screentime Level", width/2, 60);
   
   textSize(15);
   text("Day", width/2, 385);
   
   textSize(15);
-  text("Mood Level (1-10)", width/12, 85);
+  text("Screentime Level (1-10)", width/12, 85);
   
   stroke(50);
   strokeWeight(2);
